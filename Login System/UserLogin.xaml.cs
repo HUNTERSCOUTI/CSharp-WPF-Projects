@@ -23,5 +23,31 @@ namespace Login_System
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            var Username = UserName.Text;
+            var Password = PassWord.Text;
+
+            using (UserDataContext context = new UserDataContext())
+            {
+                bool userfound = context.Users.Any(user => user.Username == Username && user.Password == Password);
+
+                if (userfound)
+                {
+                    GrantAccess();
+                    Close();
+                } else
+                {
+                    MessageBox.Show("User not found");
+                }
+            }
+        }
+
+        public void GrantAccess()
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+        }
     }
 }

@@ -44,6 +44,6 @@
                  Width="250" Height="30" Margin="150, 0"/>
 
         <Button x:Name="btnLogin" Content="Log In" Grid.Column="1" Grid.Row="6" 
-                Margin="175,50,200,0" Grid.ColumnSpan="2" Height="35"/>
+                Margin="175,50,200,0" Grid.ColumnSpan="2" Height="35" Click="btnLogin_Click"/>
     </Grid>
 </Window>

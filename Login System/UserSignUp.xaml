@@ -39,11 +39,13 @@
                    Foreground="White" Text="Password" Margin="150, 40, 150, 0" />
 
         <TextBox x:Name="UserName" Grid.Column="1" Grid.Row="3" 
-                 Width="250" Height="30" Margin="150, 0"/>
+                 Width="250" Height="30" Margin="150, 0"
+                 FontSize="20"/>
         <TextBox x:Name="PassWord" Grid.Column="1" Grid.Row="5" 
-                 Width="250" Height="30" Margin="150, 0"/>
+                 Width="250" Height="30" Margin="150, 0"
+                 FontSize="20"/>
 
-        <Button x:Name="btnLogin" Content="Sign Up" Grid.Column="1" Grid.Row="6" 
-                Margin="175,50,200,0" Grid.ColumnSpan="2" Height="35"/>
+        <Button x:Name="btnSignup" Content="Sign Up" Grid.Column="1" Grid.Row="6" 
+                Margin="175,50,200,0" Grid.ColumnSpan="2" Height="35" Click="btnSignup_Click"/>
     </Grid>
 </Window>

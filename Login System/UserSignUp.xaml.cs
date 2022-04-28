@@ -23,5 +23,11 @@ namespace Login_System
         {
             InitializeComponent();
         }
+
+        private void btnSignup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
