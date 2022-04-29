@@ -1,5 +1,4 @@
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\Login System.csproj.AssemblyReference.cache
-C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\UserSignUp.g.cs
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\Login System_MarkupCompile.cache
@@ -9,7 +8,6 @@ C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\bin\Debug\net6.0-wi
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\bin\Debug\net6.0-windows\Login System.runtimeconfig.json
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\bin\Debug\net6.0-windows\Login System.dll
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\bin\Debug\net6.0-windows\Login System.pdb
-C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\UserSignUp.baml
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\Login System.g.resources
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\Login System.GeneratedMSBuildEditorConfig.editorconfig
@@ -57,3 +55,7 @@ C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\bin\Debug\net6.0-wi
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\bin\Debug\net6.0-windows\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\bin\Debug\net6.0-windows\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\Login System.csproj.CopyComplete
+C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\HomeWindow.g.cs
+C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\HomeWindow.baml
+C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\MainWindow.baml

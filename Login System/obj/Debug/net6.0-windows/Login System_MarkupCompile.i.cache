@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Zilas\source\repos\CSharp-WPF-Projects\Login System\App.xaml
-3378195603
+4-777790724
 
-91216738146
+102100859189
 2121266629322
-MainWindow.xaml;UserLogin.xaml;UserSignUp.xaml;
+HomeWindow.xaml;MainWindow.xaml;UserLogin.xaml;UserSignUp.xaml;
 
 False
 

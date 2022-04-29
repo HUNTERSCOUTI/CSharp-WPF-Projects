@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Login_System
@@ -23,6 +22,13 @@ namespace Login_System
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnHomeSignout_Click(object sender, RoutedEventArgs e)
+        {
+            HomeWindow main = new HomeWindow();
+            main.Show();
+            Close();
         }
     }
 }
