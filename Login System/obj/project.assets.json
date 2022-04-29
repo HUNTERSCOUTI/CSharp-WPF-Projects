@@ -1073,24 +1073,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Zilas\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ZilasJ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Zilas\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+      "projectUniqueName": "C:\\Users\\ZilasJ\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
       "projectName": "Login System",
-      "projectPath": "C:\\Users\\Zilas\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
-      "packagesPath": "C:\\Users\\Zilas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zilas\\source\\repos\\CSharp-WPF-Projects\\Login System\\obj\\",
+      "projectPath": "C:\\Users\\ZilasJ\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+      "packagesPath": "C:\\Users\\ZilasJ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ZilasJ\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Zilas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ZilasJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1143,7 +1138,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
