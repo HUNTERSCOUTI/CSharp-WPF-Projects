@@ -46,6 +46,7 @@
                  FontSize="20"/>
 
         <Button x:Name="btnSignup" Content="Sign Up" Grid.Column="1" Grid.Row="6" 
-                Margin="175,50,200,0" Grid.ColumnSpan="2" Height="35" Click="btnSignup_Click"/>
+                Margin="175,50,200,0" Grid.ColumnSpan="2" Height="35" 
+                Click="btnSignup_Click"/>
     </Grid>
 </Window>

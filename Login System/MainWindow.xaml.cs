@@ -14,16 +14,12 @@ using System.Windows.Shapes;
 
 namespace Login_System
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
         }
-
         private void btnHomeSignout_Click(object sender, RoutedEventArgs e)
         {
             HomeWindow main = new HomeWindow();

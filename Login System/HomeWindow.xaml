@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login_System"
         mc:Ignorable="d"
-        Title="HomeWindow" Height="500" Width="800">
+        Title="HomeWindow" Height="500" Width="800"
+        Background="#272537" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -28,7 +29,8 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="1"
-                   Text="Home" FontSize="48" Margin="320, 100, 100, 100"/>
+                   Text="Home" FontSize="48" Margin="320, 100, 100, 100"
+                   Foreground="White"/>
         
         <Button x:Name="btnLogin" Content="Login" Grid.Column="2" Grid.Row="3" 
                 Margin="250, 0, 0, 80" Height="30" Click="btnHomeLogin_Click"/>
@@ -36,3 +38,4 @@
                 Margin="250, 80, 0, 80" Height="30" Click="btnHomeSignup_Click"/>
     </Grid>
 </Window>
+    

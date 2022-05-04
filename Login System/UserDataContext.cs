@@ -17,3 +17,4 @@ namespace Login_System
         public DbSet<User>? Users { get; set; } 
     }
 }
+
