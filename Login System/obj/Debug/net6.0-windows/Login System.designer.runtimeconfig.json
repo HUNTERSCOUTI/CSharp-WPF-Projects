@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\ZilasJ\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\ZilasJ\\.nuget\\packages"
+      "C:\\Users\\LenovoThinkpad\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\LenovoThinkpad\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

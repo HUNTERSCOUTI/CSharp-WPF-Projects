@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ZilasJ\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj": {}
+    "C:\\Users\\LenovoThinkpad\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ZilasJ\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj": {
+    "C:\\Users\\LenovoThinkpad\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ZilasJ\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+        "projectUniqueName": "C:\\Users\\LenovoThinkpad\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
         "projectName": "Login System",
-        "projectPath": "C:\\Users\\ZilasJ\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
-        "packagesPath": "C:\\Users\\ZilasJ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ZilasJ\\source\\repos\\CSharp-WPF-Projects\\Login System\\obj\\",
+        "projectPath": "C:\\Users\\LenovoThinkpad\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+        "packagesPath": "C:\\Users\\LenovoThinkpad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LenovoThinkpad\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ZilasJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LenovoThinkpad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
