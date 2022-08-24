@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pa70sb1DTVvY+FobN06lEZUBw0xY/xp9zvbly6YTGNH3C0SbcoiGnnaE2Pp1m2o3sCTyQmLhFRaoV393T+7Yxw==",
+  "dgSpecHash": "JAo+HFdAgN/Zuh3UA7uqe/B15RGq79FtMy6R0rBAHCA3ZXOwqK4OnZ3hQ4YCBSHaTWmSAA7qd1F5ecLkShTlqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LenovoThinkpad\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+  "projectFilePath": "C:\\Users\\LenovoThinkpad\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LenovoThinkpad\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.4\\microsoft.data.sqlite.core.6.0.4.nupkg.sha512",
     "C:\\Users\\LenovoThinkpad\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
