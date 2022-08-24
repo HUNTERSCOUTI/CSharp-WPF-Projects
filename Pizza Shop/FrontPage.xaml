@@ -1,0 +1,48 @@
+﻿<Window x:Class="Pizza_Shop.FrontPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizza_Shop"
+        mc:Ignorable="d"
+        Title="FrontPage" Height="768" Width="1366"
+        AllowsTransparency="True" WindowStyle="None" 
+        ResizeMode="CanResizeWithGrip" Background="{x:Null}">
+    <Border
+        BorderThickness="3"
+        CornerRadius="30"
+        Background="#252223">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <Border Grid.Column="1" Grid.Row="0" 
+                Height="85" Width="auto" Cursor="Hand"
+                Padding="5" Background="#FF1F1C1D" CornerRadius="20,30,0,0">
+                <Label Foreground="White" 
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="45">
+                    Front Page
+                </Label>
+            </Border>
+
+            <Button
+            Grid.Column="1" Grid.Row="0" 
+            HorizontalAlignment="Left" Margin="50, 0, 0, 0"
+            Click="SignOut" Width="150" Height="60"
+            Style="{StaticResource UserLoginButton}">
+                Sign Out
+            </Button>
+
+        </Grid>
+    </Border>
+</Window>
