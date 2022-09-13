@@ -1,0 +1,27 @@
+﻿<Window
+    x:Class="Pizza_Shop.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="clr-namespace:Pizza_Shop.ViewModels"
+    xmlns:views="clr-namespace:Pizza_Shop.Views"
+    Title="Pizza Shop" Height="768" Width="1366"
+    AllowsTransparency="True" WindowStyle="None" 
+    ResizeMode="CanResizeWithGrip" Background="{x:Null}"
+    mc:Ignorable="d">
+    <Grid>
+        <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Content="{Binding Path=SelectedViewModel}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewmodels:StartPageViewModel}" >
+                    <views:StartPage />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:FrontPageViewModel}" >
+                    <views:FrontPage />
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+
+    </Grid>
+</Window>

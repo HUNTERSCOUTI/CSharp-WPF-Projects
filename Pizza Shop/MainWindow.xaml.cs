@@ -10,20 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Pizza_Shop.ViewModels;
 
 namespace Pizza_Shop
 {
-    public partial class FrontPage : Window
+    public partial class MainWindow : Window
     {
-        public FrontPage()
+        public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void SignOut(object sender, RoutedEventArgs e)
-        {
-
+            DataContext = new MainViewModel()
+            {
+                SelectedViewModel = new StartPageViewModel()
+            };
         }
     }
 }

@@ -1,13 +1,12 @@
-﻿<Window x:Class="Pizza_Shop.FrontPage"
+﻿<UserControl x:Class="Pizza_Shop.Views.FrontPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Pizza_Shop"
+        xmlns:local="clr-namespace:Pizza_Shop.Views"
         mc:Ignorable="d"
-        Title="FrontPage" Height="768" Width="1366"
-        AllowsTransparency="True" WindowStyle="None" 
-        ResizeMode="CanResizeWithGrip" Background="{x:Null}">
+        Height="768" Width="1366"
+        Background="{x:Null}">
     <Border
         BorderThickness="3"
         CornerRadius="30"
@@ -45,4 +44,4 @@
 
         </Grid>
     </Border>
-</Window>
+</UserControl>
