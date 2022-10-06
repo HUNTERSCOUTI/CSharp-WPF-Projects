@@ -14,14 +14,18 @@ namespace Pizza_Shop.ViewModels
 
         private StartPageViewModel _startPageViewModel;
         private FrontPageViewModel _frontPageViewModel;
+        private UserSignUpViewModel _userSignUpViewModel;
 
         public MainViewModel()
         {
             _startPageViewModel = new();
             _frontPageViewModel = new();
+            _userSignUpViewModel = new();
 
+            //First View Shown
             SelectedViewModel = _startPageViewModel;
         }
+
 
         [RelayCommand]
         public void NavigateToStartPage()
@@ -33,6 +37,12 @@ namespace Pizza_Shop.ViewModels
         public void NavigateToFrontPage()
         {
             SelectedViewModel = _frontPageViewModel;
+        }
+
+        [RelayCommand]
+        public void NavigateToSignUpPage()
+        {
+            SelectedViewModel = _userSignUpViewModel;
         }
     }
 }

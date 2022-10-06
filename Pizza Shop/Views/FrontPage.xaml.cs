@@ -25,5 +25,14 @@ namespace Pizza_Shop.Views
         {
             
         }
+        
+        public bool SendDragCommand(object sender, MouseButtonEventArgs e)
+        {
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

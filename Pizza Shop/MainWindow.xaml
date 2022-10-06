@@ -8,7 +8,7 @@
     xmlns:views="clr-namespace:Pizza_Shop.Views"
     Title="Pizza Shop" Height="768" Width="1366"
     AllowsTransparency="True" WindowStyle="None" 
-    ResizeMode="CanResizeWithGrip" Background="{x:Null}"
+    ResizeMode="NoResize" Background="{x:Null}"
     mc:Ignorable="d">
     <Grid>
         <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -19,6 +19,9 @@
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type viewmodels:FrontPageViewModel}" >
                     <views:FrontPage />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:UserSignUpViewModel}">
+                    <views:UserSignUpPage/>
                 </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>

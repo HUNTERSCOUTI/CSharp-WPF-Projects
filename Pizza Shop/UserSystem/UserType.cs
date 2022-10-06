@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
 
-namespace Pizza_Shop.ViewModels
+namespace Pizza_Shop.UserSystem
 {
-    public class StartPageViewModel : ViewModelBase
+    public enum UserType : int
     {
-        
+        UICreate = 0,
+        UIEdit = 1,
+        UIDelete = 2,
     }
 }

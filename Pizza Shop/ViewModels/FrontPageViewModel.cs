@@ -9,6 +9,6 @@ namespace Pizza_Shop.ViewModels
 {
     public class FrontPageViewModel : ViewModelBase
     {
-        public ICommand NavigateStartCommand { get; }
+        
     }
 }

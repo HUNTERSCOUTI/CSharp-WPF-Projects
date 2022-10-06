@@ -9,18 +9,16 @@
         <Style TargetType="Border" x:Key="UserLoginButton">
             
         </Style>
-        
-        <Style TargetType="Button" x:Key="TestBtn">
-            <Setter Property="Border.CornerRadius" Value="40" />
+
+        <Style TargetType="Button" x:Key="StartButtons">
             <Setter Property="Background" Value="#fdff00"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <TextBlock Text="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Margin" Value="25"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style>
+
 
     </Application.Resources>
 </Application>

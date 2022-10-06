@@ -22,25 +22,25 @@
                 <RowDefinition />
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            
-            <Border Grid.Column="1" Grid.Row="0" 
-                Height="85" Width="auto" Cursor="Hand"
-                Padding="5" Background="#FF1F1C1D" CornerRadius="20,30,0,0">
-                <Label Foreground="White" 
+
+            <Border Grid.ColumnSpan="3" Grid.Row="0" CornerRadius="30"
+                Height="85" Background="#FF1F1C1D" VerticalAlignment="Top">
+                <Label Foreground="White" Grid.ColumnSpan="1"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="45">
+                   VerticalAlignment="Top"
+                   FontSize="45" Grid.Column="1">
                     Front Page
                 </Label>
             </Border>
-
-            <Button
-            Grid.Column="1" Grid.Row="0" 
-            HorizontalAlignment="Left" Margin="50, 0, 0, 0"
-            Click="SignOut" Width="150" Height="60"
-            Style="{StaticResource UserLoginButton}">
-                Sign Out
+            <Button Style="{StaticResource StartButtons}" Width="150" Margin="25,12,25,38"
+                    Content="Log Out" Command="{Binding DataContext.NavigateToStartPageCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
             </Button>
+
 
         </Grid>
     </Border>

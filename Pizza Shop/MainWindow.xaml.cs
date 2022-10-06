@@ -26,6 +26,8 @@ namespace Pizza_Shop
             {
                 SelectedViewModel = new StartPageViewModel()
             };
+
+
         }
     }
 }
