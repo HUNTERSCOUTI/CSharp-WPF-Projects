@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pizza_Shop.ViewModels
 {
-    public class UserSignUpViewModel : ViewModelBase
+    public class UserLogInViewModel : ViewModelBase
     {
 
     }

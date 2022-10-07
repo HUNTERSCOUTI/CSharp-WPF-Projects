@@ -12,6 +12,19 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\UserLogInPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\UserLogInPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
 	<Target Name="RemoveDuplicateAnalyzers" BeforeTargets="CoreCompile">
 		<!-- Work around https://github.com/dotnet/wpf/issues/6792 -->
 

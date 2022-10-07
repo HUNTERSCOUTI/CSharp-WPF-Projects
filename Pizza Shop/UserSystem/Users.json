@@ -1,1 +1,12 @@
-[{"Id":"00000000-0000-0000-0000-000000000000","Username":null,"Password":null},{"Id":"34e38e47-316c-45e3-8918-3399b3dab155","Username":"Mathias","Password":"SIMP"}]
+[
+  {
+    "Id": "00000000-0000-0000-0000-000000000000",
+    "Username": null,
+    "Password": null
+  },
+  {
+    "Id": "34e38e47-316c-45e3-8918-3399b3dab155",
+    "Username": "Mathias",
+    "Password": "SIMP"
+  }
+]

@@ -22,7 +22,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Border Grid.ColumnSpan="3" Grid.Row="0" CornerRadius="30"
+            <Border Grid.ColumnSpan="3" Grid.Row="0" CornerRadius="30, 30, 0, 0"
                 Height="85" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <Label Foreground="White" Grid.ColumnSpan="1"
                    HorizontalAlignment="Center"
@@ -31,7 +31,7 @@
                     Pizza Shop
                 </Label>
             </Border>
-            
+
 
 
             <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" 
@@ -47,7 +47,7 @@
                 </Button>
 
                 <Button Style="{StaticResource StartButtons}"
-                    Content="Login" Command="{Binding DataContext.NavigateToFrontPageCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
+                    Content="Login" Command="{Binding DataContext.NavigateToLogInPageCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="5"/>

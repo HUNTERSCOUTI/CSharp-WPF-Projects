@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CommunityToolkit.Mvvm.Messaging;
 using Pizza_Shop.ViewModels;
 
 namespace Pizza_Shop
@@ -27,7 +28,22 @@ namespace Pizza_Shop
                 SelectedViewModel = new StartPageViewModel()
             };
 
+            WeakReferenceMessenger.Default.RegisterAll(this);
+        }
 
+        public void Receive(UserSignedUpMessage message)
+        {
+            DataContext = new MainViewModel()
+            {
+                SelectedViewModel = new UserSignUpViewModel()
+            };
+        }
+        public void Receive(UserLoggedInMessage message)
+        {
+            DataContext = new MainViewModel()
+            {
+                SelectedViewModel = new UserLogInViewModel()
+            };
         }
     }
 }

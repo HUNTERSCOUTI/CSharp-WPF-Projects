@@ -12,13 +12,6 @@ namespace Pizza_Shop.UserSystem
     {
         public static List<User> Users = new();
 
-        public static void LoadJson()
-        {
-            string fileName = @"C:\Users\LenovoThinkpad\source\repos\CSharp-WPF-Projects\Pizza Shop\UserSystem\Users.json";
-
-            
-        }
-
         public static void SaveNewUser(User newUser)
         {
             string fileName = @"C:\Users\LenovoThinkpad\source\repos\CSharp-WPF-Projects\Pizza Shop\UserSystem\Users.json";
@@ -41,10 +34,10 @@ namespace Pizza_Shop.UserSystem
 
             if (userfound)
             {
-                return true;
+                return false;
             }
 
-            return false;
+            return true;
 
         }
     }

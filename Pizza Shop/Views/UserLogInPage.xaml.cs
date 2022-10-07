@@ -7,26 +7,25 @@ using System.Windows.Controls;
 
 namespace Pizza_Shop.Views
 {
-    public partial class UserSignUpPage : UserControl
+    public partial class UserLogInPage : UserControl
     {
-        public UserSignUpPage()
+        public UserLogInPage()
         {
             InitializeComponent();
         }
 
-        private void btnSignup_Click(object sender, RoutedEventArgs e)
+        private void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
             var _Username = UserName.Text;
             var _Password = PassWord.Text;
 
-            User user = new User(_Username, _Password);
+            
 
 
             
-            if (!UserCrud.UserExists(_Username, _Password))
+            if (UserCrud.UserExists(_Username, _Password))
             {
-                UserCrud.SaveNewUser(user);
-                WeakReferenceMessenger.Default.Send(new UserSignedUpMessage());
+                WeakReferenceMessenger.Default.Send(new UserLoggedInMessage());
             }
             else
             {
