@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Pizza_Shop.UserSystem;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -22,6 +23,7 @@ namespace Pizza_Shop.Views
         public StartPage()
         {
             InitializeComponent();
+            UserCrud.LoadUserJson();
         }
     }
 }

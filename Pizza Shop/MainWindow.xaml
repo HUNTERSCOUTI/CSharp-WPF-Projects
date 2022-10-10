@@ -9,11 +9,13 @@
     Title="Pizza Shop" Height="768" Width="1366"
     AllowsTransparency="True" WindowStyle="None" 
     ResizeMode="NoResize" Background="{x:Null}"
-    mc:Ignorable="d">
+    mc:Ignorable="d" WindowStartupLocation="CenterScreen">
     <Grid>
         <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center"
-                        Content="{Binding Path=SelectedViewModel}">
+                        Content="{Binding SelectedViewModel}">
             <ContentControl.Resources>
+                
+                <!-- Binds the Viewmodel and the view together, if the VM is the selected, it will show the corrosponding view -->
                 <DataTemplate DataType="{x:Type viewmodels:StartPageViewModel}" >
                     <views:StartPage />
                 </DataTemplate>
@@ -23,6 +25,10 @@
                 <DataTemplate DataType="{x:Type viewmodels:UserSignUpViewModel}">
                     <views:UserSignUpPage/>
                 </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:UserLogInViewModel}">
+                    <views:UserLogInPage/>
+                </DataTemplate>
+                
             </ContentControl.Resources>
         </ContentControl>
 

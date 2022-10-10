@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Pizza_Shop.ViewModels
 {
-    public partial class MainViewModel : ViewModelBase
+    public partial class MainViewModel : ViewModelBase, 
+        IRecipient<UserSignedUpMessage>, IRecipient<UserLoggedInMessage>
     {
         [ObservableProperty] public ObservableObject _selectedViewModel;
 
@@ -27,6 +29,8 @@ namespace Pizza_Shop.ViewModels
 
             //First View Shown
             SelectedViewModel = _startPageViewModel;
+
+            WeakReferenceMessenger.Default.RegisterAll(this);
         }
 
 
@@ -51,6 +55,17 @@ namespace Pizza_Shop.ViewModels
         public void NavigateToLogInPage()
         {
             SelectedViewModel = _userLogInViewModel;
+        }
+
+        public void Receive(UserSignedUpMessage message)
+        {
+            SelectedViewModel = _startPageViewModel;
+            
+        }
+        public void Receive(UserLoggedInMessage message)
+        {
+            SelectedViewModel = _frontPageViewModel;
+            
         }
     }
 }

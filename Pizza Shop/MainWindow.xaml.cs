@@ -27,23 +27,6 @@ namespace Pizza_Shop
             {
                 SelectedViewModel = new StartPageViewModel()
             };
-
-            WeakReferenceMessenger.Default.RegisterAll(this);
-        }
-
-        public void Receive(UserSignedUpMessage message)
-        {
-            DataContext = new MainViewModel()
-            {
-                SelectedViewModel = new UserSignUpViewModel()
-            };
-        }
-        public void Receive(UserLoggedInMessage message)
-        {
-            DataContext = new MainViewModel()
-            {
-                SelectedViewModel = new UserLogInViewModel()
-            };
         }
     }
 }

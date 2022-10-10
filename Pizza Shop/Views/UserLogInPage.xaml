@@ -29,7 +29,7 @@
 
             <Border Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" x:Name="Border"
                 Height="85" Cursor="Hand"
-                Padding="5" Background="#FF1F1C1D" CornerRadius="20,30,0,0">
+                Padding="5" Background="#FF1F1C1D" CornerRadius="30,30,0,0">
             </Border>
             <Label Grid.Column="1" 
                    HorizontalAlignment="Center"
@@ -51,8 +51,7 @@
                 <TextBox x:Name="PassWord" Width="250" Height="30" FontSize="20"/>
             </StackPanel>
 
-            <Button Style="{StaticResource StartButtons}" Grid.Column="1" Grid.Row="6" Width="170" Height="50" Click="btnLogIn_Click"
-                    Content="Login" Command="{Binding DataContext.NavigateToFrontPageCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
+            <Button Style="{StaticResource StartButtons}" Grid.Column="1" Grid.Row="6" Width="170" Height="50" Click="btnLogIn_Click" Content="Login">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

@@ -20,16 +20,13 @@ namespace Pizza_Shop.Views
             var _Password = PassWord.Text;
 
             
-
-
-            
             if (UserCrud.UserExists(_Username, _Password))
             {
                 WeakReferenceMessenger.Default.Send(new UserLoggedInMessage());
             }
             else
             {
-                MessageBox.Show("User already exists");
+                MessageBox.Show("Login Incorrect");
             }
 
         }

@@ -34,5 +34,5 @@
 			<Analyzer Include="@(FilteredAnalyzer)" />
 		</ItemGroup>
 	</Target>
-	<ProjectExtensions><VisualStudio><UserProperties usersystem_4users_1json__JsonSchema="json" /></VisualStudio></ProjectExtensions>
+	<ProjectExtensions><VisualStudio><UserProperties pizzasystem_4pizzas_1json__JsonSchema="json" /></VisualStudio></ProjectExtensions>
 </Project>

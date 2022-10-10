@@ -11,15 +11,19 @@ namespace Pizza_Shop.UserSystem
     public static class UserCrud // User Create Reade Update Delete
     {
         public static List<User> Users = new();
+        private static readonly string fileName = @"C:\Users\LenovoThinkpad\source\repos\CSharp-WPF-Projects\Pizza Shop\UserSystem\Users.json";
 
-        public static void SaveNewUser(User newUser)
+        public static void LoadUserJson()
         {
-            string fileName = @"C:\Users\LenovoThinkpad\source\repos\CSharp-WPF-Projects\Pizza Shop\UserSystem\Users.json";
             if (File.Exists(fileName))
             {
                 string fileStr = File.ReadAllText(fileName);
                 Users = JsonConvert.DeserializeObject<List<User>>(fileStr);
             }
+        }
+
+        public static void SaveNewUser(User newUser)
+        {
             newUser.Id = Guid.NewGuid();
             Users.Add(newUser);
 
@@ -34,11 +38,9 @@ namespace Pizza_Shop.UserSystem
 
             if (userfound)
             {
-                return false;
+                return true;
             }
-
-            return true;
-
+            return false;
         }
     }
 }

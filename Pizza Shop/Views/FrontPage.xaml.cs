@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Pizza_Shop.ViewModels;
 using System.Windows.Shapes;
 
 namespace Pizza_Shop.Views
@@ -19,6 +20,7 @@ namespace Pizza_Shop.Views
         public FrontPage()
         {
             InitializeComponent();
+            FrontPageViewModel.LoadPizzaJson();
         }
 
         private void SignOut(object sender, RoutedEventArgs e)

@@ -26,7 +26,7 @@ namespace Pizza_Shop.Views
             if (!UserCrud.UserExists(_Username, _Password))
             {
                 UserCrud.SaveNewUser(user);
-                WeakReferenceMessenger.Default.Send(new UserSignedUpMessage());
+                WeakReferenceMessenger.Default.Send(new UserSignedUpMessage ());
             }
             else
             {

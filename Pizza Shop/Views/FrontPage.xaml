@@ -3,8 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Pizza_Shop.Views"
-        mc:Ignorable="d"
+        xmlns:local="clr-namespace:Pizza_Shop.Views" 
+             xmlns:viewmodels="clr-namespace:Pizza_Shop.ViewModels" 
+             d:DataContext="{d:DesignInstance Type=viewmodels:FrontPageViewModel}"
+             mc:Ignorable="d"
         Height="768" Width="1366"
         Background="{x:Null}">
     <Border
@@ -14,16 +16,16 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition />
-                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <Border Grid.ColumnSpan="3" Grid.Row="0" CornerRadius="30"
+            <Border Grid.ColumnSpan="4" Grid.Row="0" CornerRadius="30, 30, 0, 0"
                 Height="85" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <Label Foreground="White" Grid.ColumnSpan="1"
                    HorizontalAlignment="Center"
@@ -42,6 +44,27 @@
             </Button>
 
 
+            <Border Grid.ColumnSpan="2" Grid.Row="1" CornerRadius="30" Margin="25, 0, 0, 0"
+                Height="620" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
+                <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}" 
+                         Height="600" Width="430" Foreground="White"
+                         BorderBrush="{x:Null}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"/>
+                                <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding Description}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+
+
+            <Border Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" CornerRadius="30" Margin="0, 0, 25, 0"
+                Height="620" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
+
+            </Border>
         </Grid>
     </Border>
 </UserControl>
