@@ -15,6 +15,7 @@ namespace Pizza_Shop.ViewModels
     public partial class FrontPageViewModel : ViewModelBase
     {
         [ObservableProperty] private static ObservableCollection<Pizza>? _menuPizzas;
+        [ObservableProperty] private static ObservableCollection<Pizza>? _basketPizzas;
         private static readonly string fileName = @"C:\Users\LenovoThinkpad\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
 
         public static void LoadPizzaJson()

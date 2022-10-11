@@ -43,7 +43,6 @@
                 </Button.Resources>
             </Button>
 
-
             <Border Grid.ColumnSpan="2" Grid.Row="1" CornerRadius="30" Margin="25, 0, 0, 0"
                 Height="620" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}" 
@@ -51,10 +50,35 @@
                          BorderBrush="{x:Null}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"/>
-                                <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding Description}"/>
-                            </StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="250"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                
+                                <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"
+                                           Grid.Column="0" Grid.Row="0"/>
+                                <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding Description}"
+                                           Grid.Column="0" Grid.Row="1"/>
+
+                                <Border CornerRadius="100" Width="50" Height="50" 
+                                        HorizontalAlignment="Right" Opacity="1" Background="Blue" 
+                                        
+                                        Grid.Column="1" Grid.RowSpan="2">
+                                    
+                                    <Button BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}"
+                                            Click="Basket_Add">
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                            <Setter Property="Opacity" Value="1"/>
+                                        </Trigger>
+                                    </Button>
+                                </Border>
+                            </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
@@ -63,7 +87,29 @@
 
             <Border Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" CornerRadius="30" Margin="0, 0, 25, 0"
                 Height="620" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
-
+                <ListBox ItemsSource="{Binding BasketPizzas}" Background="{x:Null}" 
+                         Height="600" Width="430" Foreground="White"
+                         BorderBrush="{x:Null}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"/>
+                                    <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding Description}"/>
+                                </StackPanel>
+                                <Border CornerRadius="100" Width="50" Height="50" 
+                                        HorizontalAlignment="Right" Opacity="0.1" Background="Blue" >
+                                    <Button BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}">
+                                        <Trigger Property="IsMouseOver" Value="true">
+                                            <Setter Property="Cursor" Value="Hand"/>
+                                            <Setter Property="Opacity" Value="1"/>
+                                        </Trigger>
+                                    </Button>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </Border>
         </Grid>
     </Border>

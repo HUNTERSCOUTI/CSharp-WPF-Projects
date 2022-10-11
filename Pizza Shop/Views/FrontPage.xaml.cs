@@ -23,18 +23,9 @@ namespace Pizza_Shop.Views
             FrontPageViewModel.LoadPizzaJson();
         }
 
-        private void SignOut(object sender, RoutedEventArgs e)
+        private void Basket_Add(object sender, RoutedEventArgs e)
         {
             
-        }
-        
-        public bool SendDragCommand(object sender, MouseButtonEventArgs e)
-        {
-            if (Mouse.LeftButton == MouseButtonState.Pressed)
-            {
-                return true;
-            }
-            return false;
         }
     }
 }
