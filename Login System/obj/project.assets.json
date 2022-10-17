@@ -1194,19 +1194,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zilas\\.nuget\\packages\\": {}
+    "C:\\Users\\ZilasJ\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zilas\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+      "projectUniqueName": "C:\\Users\\ZilasJ\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
       "projectName": "Login System",
-      "projectPath": "C:\\Users\\zilas\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
-      "packagesPath": "C:\\Users\\zilas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zilas\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\obj\\",
+      "projectPath": "C:\\Users\\ZilasJ\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+      "packagesPath": "C:\\Users\\ZilasJ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ZilasJ\\source\\repos\\CSharp-WPF-Projects\\Login System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\zilas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ZilasJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1214,7 +1214,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/discord-net/api/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {

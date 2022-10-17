@@ -14,6 +14,7 @@
         CornerRadius="30"
         Background="#252223">
         <Grid>
+            <!-- Definitions -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -26,13 +27,13 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
+            <!-- Top Panel -->
             <Border Grid.ColumnSpan="4" Grid.Row="0" CornerRadius="30, 30, 0, 0"
                 Height="85" Background="#FF1F1C1D" VerticalAlignment="Top">
-                <Label Foreground="White" Grid.ColumnSpan="1"
+                <Label Content="Front Page" Foreground="White" 
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Top"
+                   VerticalAlignment="Top" Grid.ColumnSpan="1"
                    FontSize="45" Grid.Column="1">
-                    Front Page
                 </Label>
             </Border>
             <Button Style="{StaticResource StartButtons}" Width="150" Margin="25,12,25,38"
@@ -44,17 +45,18 @@
                 </Button.Resources>
             </Button>
 
+            <!-- Left Panel -->
             <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="1" CornerRadius="30" Margin="25, 0, 0, 0"
-                Height="620" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
+                Height="620" Width="350" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}"
-                         Height="600" Width="430" Foreground="White" HorizontalContentAlignment="Stretch"
+                         Height="600" Width="330" Foreground="White" HorizontalContentAlignment="Stretch"
                          BorderBrush="{x:Null}" Name="defaultPizzasMenu">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="150"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
@@ -65,20 +67,12 @@
                                     <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"/>
                                     <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Price, StringFormat=' - ${0}'}"/>
                                 </StackPanel>
-                                <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding JoinedToppings}"
+                                <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding JoinedToppings}" 
                                            Grid.Column="0" Grid.Row="1"/>
 
-                                <Border CornerRadius="100" Width="50" Height="50" 
-                                        HorizontalAlignment="Right" Opacity="1" Background="Blue"
-                                        Grid.Column="1" Grid.RowSpan="2">
-                                    
-                                    <Button Click="Basket_Add">
-                                        <!--<Trigger Property="IsMouseOver" Value="true">
-                                            <Setter Property="Cursor" Value="Hand"/>
-                                            <Setter Property="Opacity" Value="1"/>
-                                        </Trigger>-->
-                                    </Button>
-                                </Border>
+                                <Button Click="Basket_Add" Grid.Column="1" Style="{StaticResource MenuBtn}"
+                                        Height="27"/>
+                                
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -86,10 +80,61 @@
             </Border>
 
 
+            <!-- Center Panel -->
+            <Border Grid.Column="2" Grid.RowSpan="2" Grid.Row="1" CornerRadius="30"
+                Height="620" Width="500" Background="#FF1F1C1D" VerticalAlignment="Top">
+                <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}"
+                         Height="590" Width="470" Foreground="White" HorizontalContentAlignment="Stretch"
+                         BorderBrush="{x:Null}" Name="customPizzasMenu">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="150"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+
+                                
+
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+            
+            <StackPanel Grid.Column="2" Grid.Row="1">
+                <CheckBox Name="Cheese" IsChecked="True"
+                          Checked="CheeseOn" Unchecked="CheeseOff">
+                    <TextBlock Text="Cheese" Height="17" Foreground="White"/>
+                </CheckBox>
+                <StackPanel Margin="20, 5, 0, 0">
+                    <CheckBox Name="CheeseFull" IsChecked="True" 
+                              Checked="CheeseFullOn" Unchecked="CheeseFullOff">
+                        <TextBlock Text="Full" Height="17" Foreground="White"/>
+                    </CheckBox>
+
+                    <CheckBox Name="CheeseHalf" IsChecked="False"
+                              Checked="CheeseHalfOn" Unchecked="CheeseHalfOff">
+                        <TextBlock Text="Half" Height="17" Foreground="White"/>
+                    </CheckBox>
+
+                    <CheckBox Name="CheeseLittle" IsChecked="False" Foreground="White"
+                              Checked="CheeseLittleOn" Unchecked="CheeseLittleOff">
+                        <TextBlock Text="Little" Height="17" Foreground="White"/>
+                    </CheckBox>
+                </StackPanel>
+            </StackPanel>
+
+
+            <!-- Right Panel -->
             <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="3" Grid.Row="1" CornerRadius="30" Margin="0, 0, 25, 0"
-                Height="550" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
+                Height="550" Width="350" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding BasketPizzas}" Background="{x:Null}" 
-                         Height="530" Width="430" Foreground="White" HorizontalContentAlignment="Stretch"
+                         Height="530" Width="330" Foreground="White" HorizontalContentAlignment="Stretch"
                          BorderBrush="{x:Null}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -110,32 +155,28 @@
                                 <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding JoinedToppings}"
                                            Grid.Column="0" Grid.Row="1"/>
 
-                                <Border CornerRadius="100" Width="50" Height="50" 
-                                        HorizontalAlignment="Right" Opacity="1" Background="Blue"
-                                        Grid.Column="1" Grid.RowSpan="2">
-                                    <Button Click="Basket_Remove">
-                                        <!--<Trigger Property="IsMouseOver" Value="true">
-                                            <Setter Property="Cursor" Value="Hand"/>
-                                            <Setter Property="Opacity" Value="1"/>
-                                        </Trigger>-->
-                                    </Button>
-                                </Border>
+                                <Button Click="Basket_Remove" Grid.Column="1" Style="{StaticResource MenuBtn}"/>
+
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
             </Border>
-            <Label Name="finalPrice" Grid.Column="3" Grid.Row="2" FontSize="40"
-                   Content="{Binding FinalPrice, StringFormat='${0}'}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+
+            <!-- Bottom Right -->
+            <TextBlock Name="finalPrice" Grid.Column="3" Grid.Row="2" Foreground="White"
+                   Text="{Binding FinalPrice, StringFormat='${0}'}" FontSize="40"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 0, 0"/>
             <Button Style="{StaticResource StartButtons}" Width="150" HorizontalAlignment="Right"
-                    Content="Check Out" Grid.Column="3" Grid.Row="2">
+                    Content="Check Out" Grid.Column="3" Grid.Row="2" >
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            
+
         </Grid>
     </Border>
 </UserControl>

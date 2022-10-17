@@ -25,5 +25,16 @@
             <Setter Property="Foreground" Value="#adadad"/>
         </Style>
 
+        <Style x:Key="MenuBtn" TargetType="{x:Type Button}">
+            <Setter Property="Visibility" Value="Hidden" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBoxItem}},Path=IsMouseOver}" Value="True">
+                    <Setter Property="Visibility" Value="Visible" />
+                    <Setter Property="Width" Value="50"/>
+                    <Setter Property="Height" Value="25"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
     </Application.Resources>
 </Application>

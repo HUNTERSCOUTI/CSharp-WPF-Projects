@@ -30,7 +30,6 @@ namespace Pizza_Shop.PizzaSystem
         Tomato,
         Pepperoni,
         Ham,
-        Onions,
         Olives
     }
 }
