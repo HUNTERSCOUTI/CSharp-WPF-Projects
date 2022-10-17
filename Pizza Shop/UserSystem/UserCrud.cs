@@ -11,7 +11,7 @@ namespace Pizza_Shop.UserSystem
     public static class UserCrud // User Create Reade Update Delete
     {
         public static List<User> Users = new();
-        private static readonly string fileName = @"C:\Users\LenovoThinkpad\source\repos\CSharp-WPF-Projects\Pizza Shop\UserSystem\Users.json";
+        private static readonly string fileName = @"C:/Users/zilas/source/repos/CSharp-WPF-Projects/Pizza Shop/UserSystem/Users.json";
 
         public static void LoadUserJson()
         {

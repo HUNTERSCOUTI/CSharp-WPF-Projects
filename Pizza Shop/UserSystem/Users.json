@@ -1,17 +1,1 @@
-[
-  {
-    "Id": "00000000-0000-0000-0000-000000000000",
-    "Username": null,
-    "Password": null
-  },
-  {
-    "Id": "d932c182-f751-4ae9-a063-157ac413b48c",
-    "Username": "Mathias",
-    "Password": "SIMP"
-  },
-  {
-    "Id": "17d0179a-e4be-49ab-bd87-b8260b348254",
-    "Username": "Test",
-    "Password": "Test"
-  }
-]
+[{"Id":"00000000-0000-0000-0000-000000000000","Username":null,"Password":null},{"Id":"d932c182-f751-4ae9-a063-157ac413b48c","Username":"Mathias","Password":"SIMP"},{"Id":"17d0179a-e4be-49ab-bd87-b8260b348254","Username":"Test","Password":"Test"},{"Id":"d19011f4-f194-4ae5-891b-96b14bad574d","Username":"C","Password":"C"}]

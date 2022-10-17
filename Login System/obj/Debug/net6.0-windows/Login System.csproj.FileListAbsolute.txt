@@ -181,3 +181,4 @@ C:\Users\LenovoThinkpad\Source\Repos\CSharp-WPF-Projects\Login System\obj\Debug\
 C:\Users\LenovoThinkpad\Source\Repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\Login System.pdb
 C:\Users\LenovoThinkpad\Source\Repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\Login System.genruntimeconfig.cache
 C:\Users\LenovoThinkpad\Source\Repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\ref\Login System.dll
+C:\Users\zilas\source\repos\CSharp-WPF-Projects\Login System\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

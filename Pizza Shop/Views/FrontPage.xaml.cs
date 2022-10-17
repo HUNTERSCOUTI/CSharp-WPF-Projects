@@ -17,15 +17,24 @@ namespace Pizza_Shop.Views
 {
     public partial class FrontPage : UserControl
     {
+
+        FrontPageViewModel fpVM = new();
+
         public FrontPage()
         {
             InitializeComponent();
-            FrontPageViewModel.LoadPizzaJson();
+            fpVM.LoadPizzaJson();
+            DataContext = fpVM;
         }
 
         private void Basket_Add(object sender, RoutedEventArgs e)
         {
-            
+            fpVM._basketPizzas.Add(fpVM._menuPizzas[defaultPizzasMenu.Items.IndexOf((sender as FrameworkElement).DataContext)]);
+        }
+
+        private void Basket_Remove(object sender, RoutedEventArgs e)
+        {
+            fpVM._basketPizzas.Remove(fpVM._menuPizzas[defaultPizzasMenu.Items.IndexOf((sender as FrameworkElement).DataContext)]);
         }
     }
 }

@@ -14,16 +14,16 @@ namespace Pizza_Shop.ViewModels
 {
     public partial class FrontPageViewModel : ViewModelBase
     {
-        [ObservableProperty] private static ObservableCollection<Pizza>? _menuPizzas;
-        [ObservableProperty] private static ObservableCollection<Pizza>? _basketPizzas;
-        private static readonly string fileName = @"C:\Users\LenovoThinkpad\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
+        [ObservableProperty] public ObservableCollection<Pizza>? _menuPizzas;
+        [ObservableProperty] public ObservableCollection<Pizza>? _basketPizzas = new();
+        private readonly string fileName = @"C:\Users\zilas\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
 
-        public static void LoadPizzaJson()
+        public void LoadPizzaJson()
         {
             if (File.Exists(fileName))
             {
                 string fileStr = File.ReadAllText(fileName);
-                _menuPizzas = JsonConvert.DeserializeObject<ObservableCollection<Pizza>>(fileStr);
+                MenuPizzas = JsonConvert.DeserializeObject<ObservableCollection<Pizza>>(fileStr);
             }
         }
     }

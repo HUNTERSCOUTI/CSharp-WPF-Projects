@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pizza_Shop.Views" 
-             xmlns:viewmodels="clr-namespace:Pizza_Shop.ViewModels" 
-             d:DataContext="{d:DesignInstance Type=viewmodels:FrontPageViewModel}"
-             mc:Ignorable="d"
+        xmlns:viewmodels="clr-namespace:Pizza_Shop.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:FrontPageViewModel}"
+        mc:Ignorable="d"
         Height="768" Width="1366"
         Background="{x:Null}">
     <Border
@@ -47,7 +47,7 @@
                 Height="620" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}" 
                          Height="600" Width="430" Foreground="White"
-                         BorderBrush="{x:Null}">
+                         BorderBrush="{x:Null}" Name="defaultPizzasMenu">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -62,20 +62,18 @@
                                 
                                 <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"
                                            Grid.Column="0" Grid.Row="0"/>
-                                <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding Description}"
+                                <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding JoinedToppings}"
                                            Grid.Column="0" Grid.Row="1"/>
 
                                 <Border CornerRadius="100" Width="50" Height="50" 
-                                        HorizontalAlignment="Right" Opacity="1" Background="Blue" 
-                                        
+                                        HorizontalAlignment="Right" Opacity="1" Background="Blue"
                                         Grid.Column="1" Grid.RowSpan="2">
                                     
-                                    <Button BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}"
-                                            Click="Basket_Add">
-                                        <Trigger Property="IsMouseOver" Value="true">
+                                    <Button Click="Basket_Add">
+                                        <!--<Trigger Property="IsMouseOver" Value="true">
                                             <Setter Property="Cursor" Value="Hand"/>
                                             <Setter Property="Opacity" Value="1"/>
-                                        </Trigger>
+                                        </Trigger>-->
                                     </Button>
                                 </Border>
                             </Grid>
@@ -95,15 +93,15 @@
                             <StackPanel Orientation="Horizontal">
                                 <StackPanel Orientation="Vertical">
                                     <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"/>
-                                    <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding Description}"/>
+                                    <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding Toppings}"/>
                                 </StackPanel>
                                 <Border CornerRadius="100" Width="50" Height="50" 
                                         HorizontalAlignment="Right" Opacity="0.1" Background="Blue" >
-                                    <Button BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}">
-                                        <Trigger Property="IsMouseOver" Value="true">
+                                    <Button Click="Basket_Remove">
+                                        <!--<Trigger Property="IsMouseOver" Value="true">
                                             <Setter Property="Cursor" Value="Hand"/>
                                             <Setter Property="Opacity" Value="1"/>
-                                        </Trigger>
+                                        </Trigger>-->
                                     </Button>
                                 </Border>
                             </StackPanel>
@@ -111,6 +109,7 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </Border>
+            
         </Grid>
     </Border>
 </UserControl>
