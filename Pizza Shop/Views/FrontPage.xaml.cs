@@ -30,11 +30,13 @@ namespace Pizza_Shop.Views
         private void Basket_Add(object sender, RoutedEventArgs e)
         {
             fpVM._basketPizzas.Add(fpVM._menuPizzas[defaultPizzasMenu.Items.IndexOf((sender as FrameworkElement).DataContext)]);
+            fpVM.GetFinalPrice();
         }
 
         private void Basket_Remove(object sender, RoutedEventArgs e)
         {
             fpVM._basketPizzas.Remove(fpVM._menuPizzas[defaultPizzasMenu.Items.IndexOf((sender as FrameworkElement).DataContext)]);
+            fpVM.GetFinalPrice();
         }
     }
 }

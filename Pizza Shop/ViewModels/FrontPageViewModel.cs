@@ -16,6 +16,7 @@ namespace Pizza_Shop.ViewModels
     {
         [ObservableProperty] public ObservableCollection<Pizza>? _menuPizzas;
         [ObservableProperty] public ObservableCollection<Pizza>? _basketPizzas = new();
+        [ObservableProperty] public int _finalPrice;
         private readonly string fileName = @"C:\Users\zilas\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
 
         public void LoadPizzaJson()
@@ -24,6 +25,14 @@ namespace Pizza_Shop.ViewModels
             {
                 string fileStr = File.ReadAllText(fileName);
                 MenuPizzas = JsonConvert.DeserializeObject<ObservableCollection<Pizza>>(fileStr);
+            }
+        }
+
+        public void GetFinalPrice()
+        {
+            foreach(Pizza pizza in _basketPizzas)
+            {
+                _finalPrice += pizza.Price;
             }
         }
     }

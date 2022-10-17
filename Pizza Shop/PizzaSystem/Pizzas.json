@@ -2,21 +2,21 @@
   {
     "Title": "Pizza #1",
     "Price": 10,
-    "Toppings": [ "Cheese, Tomato" ]
+    "Toppings": [ "Cheese", "Tomato" ]
   },
   {
     "Title": "Pizza #2",
     "Price": 15,
-    "Toppings": [ "Cheese, Tomato, Pepperoni" ]
+    "Toppings": [ "Cheese", "Tomato", "Pepperoni" ]
   },
   {
     "Title": "Pizza #3",
     "Price": 15,
-    "Toppings": [ "Cheese, Tomato, Ham" ]
+    "Toppings": [ "Cheese", "Tomato", "Ham" ]
   },
   {
     "Title": "Pizza #4",
     "Price": 20,
-    "Toppings": [ "Cheese, Tomato, Pepperoni, Ham" ]
+    "Toppings": [ "Cheese", "Tomato", "Pepperoni", "Ham" ]
   } 
 ]

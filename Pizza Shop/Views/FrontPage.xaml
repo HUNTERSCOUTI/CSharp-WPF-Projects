@@ -23,6 +23,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition />
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <Border Grid.ColumnSpan="4" Grid.Row="0" CornerRadius="30, 30, 0, 0"
@@ -43,25 +44,27 @@
                 </Button.Resources>
             </Button>
 
-            <Border Grid.ColumnSpan="2" Grid.Row="1" CornerRadius="30" Margin="25, 0, 0, 0"
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="1" CornerRadius="30" Margin="25, 0, 0, 0"
                 Height="620" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
-                <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}" 
-                         Height="600" Width="430" Foreground="White"
+                <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}"
+                         Height="600" Width="430" Foreground="White" HorizontalContentAlignment="Stretch"
                          BorderBrush="{x:Null}" Name="defaultPizzasMenu">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="250"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
                                     <RowDefinition Height="auto"/>
                                 </Grid.RowDefinitions>
-                                
-                                <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"
-                                           Grid.Column="0" Grid.Row="0"/>
+
+                                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+                                    <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"/>
+                                    <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Price, StringFormat=' - ${0}'}"/>
+                                </StackPanel>
                                 <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding JoinedToppings}"
                                            Grid.Column="0" Grid.Row="1"/>
 
@@ -83,20 +86,33 @@
             </Border>
 
 
-            <Border Grid.ColumnSpan="2" Grid.Column="3" Grid.Row="1" CornerRadius="30" Margin="0, 0, 25, 0"
-                Height="620" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="3" Grid.Row="1" CornerRadius="30" Margin="0, 0, 25, 0"
+                Height="550" Width="450" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding BasketPizzas}" Background="{x:Null}" 
-                         Height="600" Width="430" Foreground="White"
+                         Height="530" Width="430" Foreground="White" HorizontalContentAlignment="Stretch"
                          BorderBrush="{x:Null}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <StackPanel Orientation="Vertical">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
                                     <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Title}"/>
-                                    <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding Toppings}"/>
+                                    <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding Price, StringFormat=' - ${0}'}"/>
                                 </StackPanel>
+                                <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding JoinedToppings}"
+                                           Grid.Column="0" Grid.Row="1"/>
+
                                 <Border CornerRadius="100" Width="50" Height="50" 
-                                        HorizontalAlignment="Right" Opacity="0.1" Background="Blue" >
+                                        HorizontalAlignment="Right" Opacity="1" Background="Blue"
+                                        Grid.Column="1" Grid.RowSpan="2">
                                     <Button Click="Basket_Remove">
                                         <!--<Trigger Property="IsMouseOver" Value="true">
                                             <Setter Property="Cursor" Value="Hand"/>
@@ -104,11 +120,21 @@
                                         </Trigger>-->
                                     </Button>
                                 </Border>
-                            </StackPanel>
+                            </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
             </Border>
+            <Label Name="finalPrice" Grid.Column="3" Grid.Row="2" FontSize="40"
+                   Content="{Binding FinalPrice, StringFormat='${0}'}" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            <Button Style="{StaticResource StartButtons}" Width="150" HorizontalAlignment="Right"
+                    Content="Check Out" Grid.Column="3" Grid.Row="2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
             
         </Grid>
     </Border>
