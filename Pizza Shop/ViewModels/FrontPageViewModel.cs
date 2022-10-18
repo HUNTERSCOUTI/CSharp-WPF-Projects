@@ -44,5 +44,15 @@ namespace Pizza_Shop.ViewModels
             }
             FinalPrice =+ tempPrice;
         }
+
+        public int GetCustomPrice()
+        {
+            int price = 0;
+            foreach(Toppings topping in CustomPizza.Toppings)
+            {
+                price += 5;
+            }
+            return price;
+        }
     }
 }

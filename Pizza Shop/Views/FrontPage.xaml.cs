@@ -22,8 +22,6 @@ namespace Pizza_Shop.Views
     {
 
         FrontPageViewModel fpVM = new();
-        
-        //[ObservableProperty] public Pizza _customPizza = new("Custom Pizza", 0, CustomToppings);
 
         static ObservableCollection<Toppings> CustomToppings = new();
 
