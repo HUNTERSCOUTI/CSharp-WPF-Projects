@@ -72,7 +72,7 @@
 
                                 <Button Click="Basket_Add" Grid.Column="1" Style="{StaticResource MenuBtn}"
                                         Height="27"/>
-                                
+
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -82,59 +82,163 @@
 
             <!-- Center Panel -->
             <Border Grid.Column="2" Grid.RowSpan="2" Grid.Row="1" CornerRadius="30"
-                Height="620" Width="500" Background="#FF1F1C1D" VerticalAlignment="Top">
-                <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}"
-                         Height="590" Width="470" Foreground="White" HorizontalContentAlignment="Stretch"
-                         BorderBrush="{x:Null}" Name="customPizzasMenu">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="150"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                </Grid.RowDefinitions>
+                Height="320" Width="500" Background="#FF1F1C1D" VerticalAlignment="Top">
+                <Grid Height="290" Width="470">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
 
-                                
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0" Margin="0, 50, 0, 0" >
+                        <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding CustomPizza.Title}"/>
+                        <TextBlock Style="{StaticResource PizzaTitle}" Text="{Binding CustomPizza.Price, StringFormat=' - ${0}'}"/>
+                    </StackPanel>
+                    <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding CustomPizza.JoinedToppings}" 
+                               Grid.Column="0" Grid.Row="1"/>
 
-                            </Grid>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                    <Button Style="{StaticResource StartButtons}" Width="60" HorizontalAlignment="Center"
+                    Content="ADD" Grid.Column="0" Grid.Row="2" Click="CustomBasket_Add">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="50"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                    <!-- Check Boxes -->
+                    <StackPanel Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
+
+                        <!--CHEESE-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Cheese" IsChecked="True"
+                                      Checked="CheesePizza" Unchecked="CheesePizza">
+                                <TextBlock Text="Cheese" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                        <!--TOMATO-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Tomato" IsChecked="True"
+                                      Checked="TomatoPizza" Unchecked="TomatoPizza">
+                                <TextBlock Text="Tomato" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                        <!--PEPPERONI-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Pepperoni" IsChecked="False"
+                                      Checked="PepperoniPizza" Unchecked="PepperoniPizza">
+                                <TextBlock Text="Pepperoni" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                        <!--HAM-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Ham" IsChecked="False"
+                                      Checked="HamPizza" Unchecked="HamPizza">
+                                <TextBlock Text="Ham" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                        <!--OLIVES-->
+                        <StackPanel Orientation="Vertical" Margin="10 5">
+                            <CheckBox Name="Olives" IsChecked="False"
+                                      Checked="OlivesPizza" Unchecked="OlivesPizza">
+                                <TextBlock Text="Olives" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                    </StackPanel>
+                    <StackPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal">
+
+                        <!--ONIONS-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Onions" IsChecked="False"
+                                      Checked="OnionsPizza" Unchecked="OnionsPizza">
+                                <TextBlock Text="Onions" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                        <!--LETTUCE-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Lettuce" IsChecked="False"
+                                      Checked="LettucePizza" Unchecked="LettucePizza">
+                                <TextBlock Text="Lettuce" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                        <!--PINEAPPLE-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Pineapple" IsChecked="False"
+                                      Checked="PineapplePizza" Unchecked="PineapplePizza">
+                                <TextBlock Text="Pineapple " Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                        <!--BEEF-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Beef" IsChecked="False"
+                                      Checked="BeefPizza" Unchecked="BeefPizza">
+                                <TextBlock Text="Beef" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                        <!--KEBAB-->
+                        <StackPanel Orientation="Vertical" Margin="10, 5">
+                            <CheckBox Name="Kebab" IsChecked="False"
+                                      Checked="KebabPizza" Unchecked="KebabPizza">
+                                <TextBlock Text="Kebab" Height="17" Foreground="White"/>
+                                <CheckBox.LayoutTransform>
+                                    <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                </CheckBox.LayoutTransform>
+                            </CheckBox>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Grid>
             </Border>
-            
-            <StackPanel Grid.Column="2" Grid.Row="1">
-                <CheckBox Name="Cheese" IsChecked="True"
-                          Checked="CheeseOn" Unchecked="CheeseOff">
-                    <TextBlock Text="Cheese" Height="17" Foreground="White"/>
-                </CheckBox>
-                <StackPanel Margin="20, 5, 0, 0">
-                    <CheckBox Name="CheeseFull" IsChecked="True" 
-                              Checked="CheeseFullOn" Unchecked="CheeseFullOff">
-                        <TextBlock Text="Full" Height="17" Foreground="White"/>
-                    </CheckBox>
-
-                    <CheckBox Name="CheeseHalf" IsChecked="False"
-                              Checked="CheeseHalfOn" Unchecked="CheeseHalfOff">
-                        <TextBlock Text="Half" Height="17" Foreground="White"/>
-                    </CheckBox>
-
-                    <CheckBox Name="CheeseLittle" IsChecked="False" Foreground="White"
-                              Checked="CheeseLittleOn" Unchecked="CheeseLittleOff">
-                        <TextBlock Text="Little" Height="17" Foreground="White"/>
-                    </CheckBox>
-                </StackPanel>
-            </StackPanel>
 
 
             <!-- Right Panel -->
             <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="3" Grid.Row="1" CornerRadius="30" Margin="0, 0, 25, 0"
-                Height="550" Width="350" Background="#FF1F1C1D" VerticalAlignment="Top">
+                Height="620" Width="350" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding BasketPizzas}" Background="{x:Null}" 
-                         Height="530" Width="330" Foreground="White" HorizontalContentAlignment="Stretch"
+                         Height="600" Width="330" Foreground="White" HorizontalContentAlignment="Stretch"
                          BorderBrush="{x:Null}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -165,11 +269,11 @@
 
 
             <!-- Bottom Right -->
-            <TextBlock Name="finalPrice" Grid.Column="3" Grid.Row="2" Foreground="White"
+            <TextBlock Name="finalPrice" Grid.Column="2" Grid.Row="2" Foreground="White"
                    Text="{Binding FinalPrice, StringFormat='${0}'}" FontSize="40"
                    VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 0, 0"/>
             <Button Style="{StaticResource StartButtons}" Width="150" HorizontalAlignment="Right"
-                    Content="Check Out" Grid.Column="3" Grid.Row="2" >
+                    Content="Check Out" Grid.Column="2" Grid.Row="2" >
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

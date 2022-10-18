@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Pizza_Shop.PizzaSystem
 {
     public class Pizza
     {
-        public Pizza(string _title, int _price, List<Toppings> _toppings)
+        public Pizza(string _title, int _price, ObservableCollection<Toppings> _toppings)
         {
             Title = _title;
             Price = _price;
@@ -19,7 +20,7 @@ namespace Pizza_Shop.PizzaSystem
 
         public int Price { get; set; }
 
-        public List<Toppings> Toppings { get; set; } = new();
+        public ObservableCollection<Toppings> Toppings { get; set; } = new();
 
         public string JoinedToppings => string.Join(", ", Toppings);
     }
@@ -30,6 +31,11 @@ namespace Pizza_Shop.PizzaSystem
         Tomato,
         Pepperoni,
         Ham,
-        Olives
+        Olives,
+        Onions,
+        Pineapple,
+        Lettuce,
+        Beef,
+        Kebab
     }
 }
