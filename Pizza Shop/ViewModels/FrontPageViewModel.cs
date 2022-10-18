@@ -14,17 +14,17 @@ namespace Pizza_Shop.ViewModels
 {
     public partial class FrontPageViewModel : ViewModelBase
     {
-        [ObservableProperty] public ObservableCollection<Pizza>? _menuPizzas;
-        [ObservableProperty] public ObservableCollection<Pizza>? _basketPizzas = new();
-        [ObservableProperty] public Pizza? _customPizza;
-        [ObservableProperty] public int _finalPrice;
+        [ObservableProperty] private ObservableCollection<Pizza>? _menuPizzas;
+        [ObservableProperty] private ObservableCollection<Pizza>? _basketPizzas = new();
+        [ObservableProperty] private Pizza? _customPizza = new("Custom Pizza", 0, new ObservableCollection<Toppings> { });
+        [ObservableProperty] private int _finalPrice;
 
 
         //LAPTOP
-        private readonly string fileName = @"C:\Users\zilas\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
+        //private readonly string fileName = @"C:\Users\zilas\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
 
         //DESKTOP
-        //private readonly string fileName = @"C:\Users\ZilasJ\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
+        private readonly string fileName = @"C:\Users\ZilasJ\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
 
         public void LoadPizzaJson()
         {
@@ -38,19 +38,11 @@ namespace Pizza_Shop.ViewModels
         public void GetFinalPrice()
         {
             int tempPrice = 0;
-            foreach (Pizza pizza in _basketPizzas)
+            foreach (Pizza pizza in BasketPizzas)
             {
                 tempPrice += pizza.Price;
             }
             FinalPrice =+ tempPrice;
         }
-
-        //public void CustomPizzaSetter(Pizza customPizza)
-        //{
-        //    CustomPizza = customPizza;
-        //    CustomPizza.Title = customPizza.Title;
-        //    CustomPizza.Price = customPizza.Toppings.Count * 5;
-        //    CustomPizza.Toppings = customPizza.Toppings;
-        //}
     }
 }
