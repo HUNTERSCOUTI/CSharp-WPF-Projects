@@ -236,9 +236,9 @@
 
             <!-- Right Panel -->
             <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="3" Grid.Row="1" CornerRadius="30" Margin="0, 0, 25, 0"
-                Height="620" Width="350" Background="#FF1F1C1D" VerticalAlignment="Top">
+                Height="620" Width="400" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding BasketPizzas}" Background="{x:Null}" 
-                         Height="600" Width="330" Foreground="White" HorizontalContentAlignment="Stretch"
+                         Height="600" Width="380" Foreground="White" HorizontalContentAlignment="Stretch"
                          BorderBrush="{x:Null}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>

@@ -16,8 +16,10 @@ namespace Pizza_Shop.ViewModels
     {
         [ObservableProperty] private ObservableCollection<Pizza>? _menuPizzas;
         [ObservableProperty] private ObservableCollection<Pizza>? _basketPizzas = new();
-        [ObservableProperty] private Pizza? _customPizza = new("Custom Pizza", 0, new ObservableCollection<Toppings> { });
+        [ObservableProperty] private Pizza? _customPizza = new("Custom Pizza #1", 0, new ObservableCollection<Toppings> { });
         [ObservableProperty] private int _finalPrice;
+
+        private int amountOfCustomPizzas = 1;
 
         //LAPTOP
         private readonly string fileName = @"C:\Users\zilas\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
@@ -47,11 +49,17 @@ namespace Pizza_Shop.ViewModels
         public void GetCustomPrice()
         {
             int price = 2; // Extra pizza custom fee
-            foreach(Toppings topping in CustomPizza.Toppings)
+            foreach(Toppings topping in CustomPizza._toppings)
             {
                 price += 5;
             }
             CustomPizza.Price = price;
+        }
+
+        public void GetCustomName()
+        {
+            amountOfCustomPizzas++;
+            CustomPizza.Title = $"Custom Pizza #{amountOfCustomPizzas}";
         }
     }
 }

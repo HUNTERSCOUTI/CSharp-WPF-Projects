@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System;
+using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -10,28 +11,30 @@ using System.Threading.Tasks;
 
 namespace Pizza_Shop.PizzaSystem
 {
-    public class Pizza : ObservableObject
+    public partial class Pizza : ObservableObject
     {
         public Pizza(string _title, int _price, IEnumerable<Toppings> _toppings)
         {
             Title = _title;
             Price = _price;
             if( _toppings != null )
-                Toppings = new(_toppings);
-
-            Toppings.CollectionChanged += (o, e) =>
-            {
-                OnPropertyChanged(JoinedToppings);
-            };
+                this._toppings.CollectionChanged += Toppings_CollectionChanged;
         }
 
-        public string Title { get; set; } = string.Empty;
+        private void Toppings_CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
+        {
+            OnPropertyChanged(nameof(JoinedToppings));
+        }
 
-        public int Price { get; set; }
+        [ObservableProperty] public string _title = string.Empty;
 
-        public ObservableCollection<Toppings> Toppings { get; set; } = new();
+        [ObservableProperty] public int _price;
 
-        public string JoinedToppings => string.Join(", ", Toppings);
+        [ObservableProperty] public ObservableCollection<Toppings> _toppings = new();
+
+        public string JoinedToppings => string.Join(", ", _toppings);
+
+        public event PropertyChangedEventHandler? PropertyChanged;
     }
 
     public enum Toppings
