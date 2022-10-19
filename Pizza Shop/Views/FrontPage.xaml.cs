@@ -58,6 +58,12 @@ namespace Pizza_Shop.Views
             
         }
 
+
+        private void btnCheckOut(object sender, RoutedEventArgs e)
+        {
+            ConfirmWindow confirmWindow = new ConfirmWindow();
+            confirmWindow.Show();
+        }
         private void Basket_Add(object sender, RoutedEventArgs e)
         {
             fpVM.BasketPizzas.Add(fpVM.MenuPizzas[defaultPizzasMenu.Items.IndexOf((sender as FrameworkElement).DataContext)]);

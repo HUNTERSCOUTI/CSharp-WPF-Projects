@@ -18,17 +18,19 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <!-- Top Panel TO DO: MAKE TOP LABELS-->
-            <Border Grid.ColumnSpan="4" Grid.Row="0" CornerRadius="30, 30, 0, 0"
+            <!-- Top Title Header -->
+            <Border Grid.ColumnSpan="5" Grid.Row="0" CornerRadius="30, 30, 0, 0"
                 Height="85" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <Label Content="Front Page" Foreground="White" 
                    HorizontalAlignment="Center"
@@ -36,7 +38,7 @@
                    FontSize="45" Grid.Column="1">
                 </Label>
             </Border>
-            <Button Style="{StaticResource StartButtons}" Width="150" Margin="25,12,25,38"
+            <Button Style="{StaticResource Buttons}" Width="150" Margin="25,12,25,38"
                     Content="Log Out" Command="{Binding DataContext.NavigateToStartPageCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -45,11 +47,21 @@
                 </Button.Resources>
             </Button>
 
+            <!-- Top Panel -->
+            <!--#region Top Name Labels-->
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Menu" 
+                   Foreground="White" FontSize="32" HorizontalAlignment="Center"/>
+            <Label Grid.Row="1" Grid.Column="2" Content="Custom Pizza" 
+                   Foreground="White" FontSize="32" HorizontalAlignment="Center"/>
+            <Label Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Content="Cart" 
+                   Foreground="White" FontSize="32" HorizontalAlignment="Center"/>
+            <!--#endregion-->
+
             <!-- Left Panel -->
-            <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="1" CornerRadius="30" Margin="25, 0, 0, 0"
-                Height="620" Width="350" Background="#FF1F1C1D" VerticalAlignment="Top">
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="2" CornerRadius="30" Margin="25, 0, 0, 0"
+                Height="580" Width="350" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding MenuPizzas}" Background="{x:Null}"
-                         Height="600" Width="330" Foreground="White" HorizontalContentAlignment="Stretch"
+                         Height="560" Width="330" Foreground="White" HorizontalContentAlignment="Stretch"
                          BorderBrush="{x:Null}" Name="defaultPizzasMenu">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -81,7 +93,7 @@
 
 
             <!-- Center Panel -->
-            <Border Grid.Column="2" Grid.RowSpan="2" Grid.Row="1" CornerRadius="30"
+            <Border Grid.Column="2" Grid.RowSpan="2" Grid.Row="2" CornerRadius="30"
                 Height="320" Width="500" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <Grid Height="290" Width="470">
                     <Grid.ColumnDefinitions>
@@ -103,7 +115,7 @@
                     <TextBlock Style="{StaticResource PizzaDesc}" Text="{Binding CustomPizza.JoinedToppings}" 
                                Grid.Column="0" Grid.Row="1"/>
 
-                    <Button Style="{StaticResource StartButtons}" Width="60" HorizontalAlignment="Center"
+                    <Button Style="{StaticResource Buttons}" Width="60" HorizontalAlignment="Center"
                     Content="ADD" Grid.Column="0" Grid.Row="2" Click="CustomBasket_Add">
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -235,10 +247,10 @@
 
 
             <!-- Right Panel -->
-            <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="3" Grid.Row="1" CornerRadius="30" Margin="0, 0, 25, 0"
-                Height="620" Width="400" Background="#FF1F1C1D" VerticalAlignment="Top">
+            <Border Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="3" Grid.Row="2" CornerRadius="30" Margin="0, 0, 25, 0"
+                Height="580" Width="400" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <ListBox ItemsSource="{Binding BasketPizzas}" Background="{x:Null}" 
-                         Height="600" Width="380" Foreground="White" HorizontalContentAlignment="Stretch"
+                         Height="560" Width="380" Foreground="White" HorizontalContentAlignment="Stretch"
                          BorderBrush="{x:Null}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -269,11 +281,11 @@
 
 
             <!-- Bottom Right -->
-            <TextBlock Name="finalPrice" Grid.Column="2" Grid.Row="2" Foreground="White"
+            <TextBlock Name="finalPrice" Grid.Column="2" Grid.Row="3" Foreground="White"
                    Text="{Binding FinalPrice, StringFormat='${0}'}" FontSize="40"
                    VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 0, 0, 0"/>
-            <Button Style="{StaticResource StartButtons}" Width="150" HorizontalAlignment="Right"
-                    Content="Check Out" Grid.Column="2" Grid.Row="2" >
+            <Button Style="{StaticResource Buttons}" Width="150" HorizontalAlignment="Right"
+                    Content="Check Out" Grid.Column="2" Grid.Row="3" Click="btnCheckOut">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
