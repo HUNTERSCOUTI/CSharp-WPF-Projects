@@ -18,13 +18,14 @@ namespace Pizza_Shop.ViewModels
         [ObservableProperty] private ObservableCollection<Pizza>? _basketPizzas = new();
         [ObservableProperty] private Pizza? _customPizza = new("Custom Pizza", 0, new ObservableCollection<Toppings> { });
         [ObservableProperty] private int _finalPrice;
-
+        
+        
 
         //LAPTOP
-        //private readonly string fileName = @"C:\Users\zilas\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
+        private readonly string fileName = @"C:\Users\zilas\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
 
         //DESKTOP
-        private readonly string fileName = @"C:\Users\ZilasJ\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
+        //private readonly string fileName = @"C:\Users\ZilasJ\source\repos\CSharp-WPF-Projects\Pizza Shop\PizzaSystem\Pizzas.json";
 
         public void LoadPizzaJson()
         {

@@ -12,10 +12,10 @@ namespace Pizza_Shop.ViewModels
 {
     public partial class PizzaViewModel : ObservableObject
     {
-        public PizzaViewModel(string title, decimal price, IEnumerable<Toppings> toppings)
+        public PizzaViewModel(string title, int price, IEnumerable<Toppings> toppings)
         {
-            Title = title;
-            Price = price;
+            _title = title;
+            _price = price;
             Toppings = new(toppings);
 
             Toppings.CollectionChanged += (o, e) =>
@@ -25,10 +25,9 @@ namespace Pizza_Shop.ViewModels
         }
 
         [ObservableProperty] private string _title;
-        [ObservableProperty] private decimal _price;
+        [ObservableProperty] private int _price;
         public ObservableCollection<Toppings> Toppings { get; }
 
         public string JoinedToppings => string.Join(", ", Toppings);
     }
-    //https://paste.mod.gg/xqwzojczvmtl/0 
 }
