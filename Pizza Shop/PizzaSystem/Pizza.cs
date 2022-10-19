@@ -33,8 +33,6 @@ namespace Pizza_Shop.PizzaSystem
         [ObservableProperty] public ObservableCollection<Toppings> _toppings = new();
 
         public string JoinedToppings => string.Join(", ", _toppings);
-
-        public event PropertyChangedEventHandler? PropertyChanged;
     }
 
     public enum Toppings
