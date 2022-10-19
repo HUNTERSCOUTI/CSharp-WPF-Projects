@@ -1,19 +1,28 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Pizza_Shop.PizzaSystem
 {
-    public class Pizza
+    public class Pizza : ObservableObject
     {
-        public Pizza(string _title, int _price, ObservableCollection<Toppings> _toppings)
+        public Pizza(string _title, int _price, IEnumerable<Toppings> _toppings)
         {
             Title = _title;
             Price = _price;
-            Toppings = _toppings;
+            if( _toppings != null )
+                Toppings = new(_toppings);
+
+            Toppings.CollectionChanged += (o, e) =>
+            {
+                OnPropertyChanged(JoinedToppings);
+            };
         }
 
         public string Title { get; set; } = string.Empty;

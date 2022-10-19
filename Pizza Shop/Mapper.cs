@@ -10,9 +10,9 @@ namespace Pizza_Shop
 {
     public static class Mapper
     {
-        public static PizzaViewModel ToViewModel(this Pizza model)
-        {
-            return new(model.Title, model.Price, model.Toppings);
-        }
+        //public static PizzaViewModel ToViewModel(this Pizza model)
+        //{
+        //    return new(model.Title, model.Price, model.Toppings);
+        //}
     }
 }

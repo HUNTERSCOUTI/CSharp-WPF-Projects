@@ -12,22 +12,22 @@ namespace Pizza_Shop.ViewModels
 {
     public partial class PizzaViewModel : ObservableObject
     {
-        public PizzaViewModel(string title, int price, IEnumerable<Toppings> toppings)
-        {
-            _title = title;
-            _price = price;
-            Toppings = new(toppings);
+        //public PizzaViewModel(string title, int price, IEnumerable<Toppings> toppings)
+        //{
+        //    _title = title;
+        //    _price = price;
+        //    Toppings = new(toppings);
 
-            Toppings.CollectionChanged += (o, e) =>
-            {
-                OnPropertyChanged(JoinedToppings);
-            };
-        }
+        //    Toppings.CollectionChanged += (o, e) =>
+        //    {
+        //        OnPropertyChanged(JoinedToppings);
+        //    };
+        //}
 
-        [ObservableProperty] private string _title;
-        [ObservableProperty] private int _price;
-        public ObservableCollection<Toppings> Toppings { get; }
+        //[ObservableProperty] private string _title;
+        //[ObservableProperty] private int _price;
+        //public ObservableCollection<Toppings> Toppings { get; }
 
-        public string JoinedToppings => string.Join(", ", Toppings);
+        //public string JoinedToppings => string.Join(", ", Toppings);
     }
 }

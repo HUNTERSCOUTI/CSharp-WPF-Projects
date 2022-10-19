@@ -118,7 +118,7 @@
                         <!--CHEESE-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Cheese" IsChecked="True"
-                                      Checked="CheesePizza" Unchecked="CheesePizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Cheese" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -129,7 +129,7 @@
                         <!--TOMATO-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Tomato" IsChecked="True"
-                                      Checked="TomatoPizza" Unchecked="TomatoPizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Tomato" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -140,7 +140,7 @@
                         <!--PEPPERONI-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Pepperoni" IsChecked="False"
-                                      Checked="PepperoniPizza" Unchecked="PepperoniPizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Pepperoni" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -151,7 +151,7 @@
                         <!--HAM-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Ham" IsChecked="False"
-                                      Checked="HamPizza" Unchecked="HamPizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Ham" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -162,7 +162,7 @@
                         <!--OLIVES-->
                         <StackPanel Orientation="Vertical" Margin="10 5">
                             <CheckBox Name="Olives" IsChecked="False"
-                                      Checked="OlivesPizza" Unchecked="OlivesPizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Olives" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -176,7 +176,7 @@
                         <!--ONIONS-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Onions" IsChecked="False"
-                                      Checked="OnionsPizza" Unchecked="OnionsPizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Onions" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -187,7 +187,7 @@
                         <!--LETTUCE-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Lettuce" IsChecked="False"
-                                      Checked="LettucePizza" Unchecked="LettucePizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Lettuce" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -198,7 +198,7 @@
                         <!--PINEAPPLE-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Pineapple" IsChecked="False"
-                                      Checked="PineapplePizza" Unchecked="PineapplePizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Pineapple " Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -209,7 +209,7 @@
                         <!--BEEF-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Beef" IsChecked="False"
-                                      Checked="BeefPizza" Unchecked="BeefPizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Beef" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
@@ -220,7 +220,7 @@
                         <!--KEBAB-->
                         <StackPanel Orientation="Vertical" Margin="10, 5">
                             <CheckBox Name="Kebab" IsChecked="False"
-                                      Checked="KebabPizza" Unchecked="KebabPizza">
+                                      Checked="ToppingPizza" Unchecked="ToppingPizza">
                                 <TextBlock Text="Kebab" Height="17" Foreground="White"/>
                                 <CheckBox.LayoutTransform>
                                     <ScaleTransform ScaleX="1.2" ScaleY="1.2" />

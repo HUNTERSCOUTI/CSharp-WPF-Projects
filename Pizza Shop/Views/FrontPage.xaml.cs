@@ -51,125 +51,238 @@ namespace Pizza_Shop.Views
             fpVM.GetFinalPrice();
         }
 
-
-        private void CheesePizza(object sender, RoutedEventArgs e)
+        private void ToppingPizza(object sender, RoutedEventArgs e)
         {
-            if (Cheese.IsChecked == true)
+            string objname = ((CheckBox)sender).Name;
+
+            switch (objname)
             {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Cheese);
+                case "Cheese":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Cheese);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Cheese);
+                    }
+                    break;
+
+                case "Tomato":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Tomato);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Tomato);
+                    }
+                    break;
+
+                case "Pepperoni":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Pepperoni);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Pepperoni);
+                    }
+                    break;
+                case "Ham":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Ham);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Ham);
+                    }
+                    break;
+                case "Olives":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Olives);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Olives);
+                    }
+                    break;
+                case "Onions":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Onions);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Onions);
+                    }
+                    break;
+                case "Lettuce":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Lettuce);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Lettuce);
+                    }
+                    break;
+                case "Pineapple":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Pineapple);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Pineapple);
+                    }
+                    break;
+                case "Beef":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Beef);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Beef);
+                    }
+                    break;
+                case "Kebab":
+                    if (Cheese.IsChecked == true)
+                    {
+                        fpVM.CustomPizza.Toppings.Add(Toppings.Kebab);
+                    }
+                    else
+                    {
+                        fpVM.CustomPizza.Toppings.Remove(Toppings.Kebab);
+                    }
+                    break;
             }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Cheese);
-            }
+            fpVM.GetCustomPrice();
         }
 
-        private void TomatoPizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Tomato);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Tomato);
-            }
-        }
+        //private void CheesePizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Cheese);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Cheese);
+        //    }
+        //}
 
-        private void PepperoniPizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Pepperoni);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Pepperoni);
-            }
-        }
+        //private void TomatoPizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Tomato);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Tomato);
+        //    }
+        //}
 
-        private void HamPizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Ham);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Ham);
-            }
-        }
+        //private void PepperoniPizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Pepperoni);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Pepperoni);
+        //    }
+        //}
 
-        private void OlivesPizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Olives);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Olives);
-            }
-        }
+        //private void HamPizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Ham);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Ham);
+        //    }
+        //}
 
-        private void OnionsPizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Onions);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Onions);
-            }
-        }
+        //private void OlivesPizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Olives);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Olives);
+        //    }
+        //}
 
-        private void LettucePizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Lettuce);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Lettuce);
-            }
-        }
+        //private void OnionsPizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Onions);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Onions);
+        //    }
+        //}
 
-        private void PineapplePizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Pineapple);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Pineapple);
-            }
-        }
+        //private void LettucePizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Lettuce);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Lettuce);
+        //    }
+        //}
 
-        private void BeefPizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Beef);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Beef);
-            }
-        }
+        //private void PineapplePizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Pineapple);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Pineapple);
+        //    }
+        //}
 
-        private void KebabPizza(object sender, RoutedEventArgs e)
-        {
-            if (Cheese.IsChecked == true)
-            {
-                fpVM.CustomPizza.Toppings.Add(Toppings.Kebab);
-            }
-            else
-            {
-                fpVM.CustomPizza.Toppings.Remove(Toppings.Kebab);
-            }
-        }
+        //private void BeefPizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Beef);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Beef);
+        //    }
+        //}
+
+        //private void KebabPizza(object sender, RoutedEventArgs e)
+        //{
+        //    if (Cheese.IsChecked == true)
+        //    {
+        //        fpVM.CustomPizza.Toppings.Add(Toppings.Kebab);
+        //    }
+        //    else
+        //    {
+        //        fpVM.CustomPizza.Toppings.Remove(Toppings.Kebab);
+        //    }
+        //}
+
+        
     }
 }
