@@ -51,7 +51,7 @@
                 <TextBox x:Name="PassWord" Width="250" Height="30" FontSize="20"/>
             </StackPanel>
 
-            <Button Style="{StaticResource StartButtons}" Grid.Column="1" Grid.Row="6" Width="170" Height="50" Click="btnSignup_Click" Content="Sign Up">
+            <Button Style="{StaticResource Buttons}" Grid.Column="1" Grid.Row="6" Width="170" Height="50" Click="btnSignup_Click" Content="Sign Up">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
