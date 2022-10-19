@@ -27,7 +27,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <!-- Top Panel -->
+            <!-- Top Panel TO DO: MAKE TOP LABELS-->
             <Border Grid.ColumnSpan="4" Grid.Row="0" CornerRadius="30, 30, 0, 0"
                 Height="85" Background="#FF1F1C1D" VerticalAlignment="Top">
                 <Label Content="Front Page" Foreground="White" 
