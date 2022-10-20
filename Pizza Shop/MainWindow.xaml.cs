@@ -25,7 +25,7 @@ namespace Pizza_Shop
 
             DataContext = new MainViewModel()
             {
-                SelectedViewModel = new FrontPageViewModel()
+                SelectedViewModel = new StartPageViewModel()
             };
         }
     }

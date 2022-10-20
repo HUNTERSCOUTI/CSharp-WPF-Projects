@@ -21,7 +21,7 @@ namespace Pizza_Shop.Views
     public partial class FrontPage : UserControl
     {
 
-        FrontPageViewModel fpVM = new();
+        public FrontPageViewModel fpVM = new();
 
         public FrontPage()  
         {
@@ -34,7 +34,7 @@ namespace Pizza_Shop.Views
 
         private void startNewCustom()
         {
-            fpVM.CustomPizza = new Pizza("Custom Pizza", 0, new ObservableCollection<Toppings> { });
+            fpVM.CustomPizza = new Pizza("", 0, new ObservableCollection<Toppings> { });
             fpVM.GetCustomName();
 
             Cheese.IsChecked = true;
@@ -53,7 +53,7 @@ namespace Pizza_Shop.Views
             Ham.IsChecked = false;
             Pineapple.IsChecked = false;
             #endregion
-
+                
             fpVM.GetCustomPrice();
             
         }
@@ -61,7 +61,7 @@ namespace Pizza_Shop.Views
 
         private void btnCheckOut(object sender, RoutedEventArgs e)
         {
-            ConfirmWindow confirmWindow = new ConfirmWindow();
+            ConfirmWindow confirmWindow = new(fpVM.BasketPizzas, fpVM.FinalPrice);
             confirmWindow.Show();
         }
         private void Basket_Add(object sender, RoutedEventArgs e)
