@@ -12,12 +12,14 @@
             <Setter Property="Background" Value="{StaticResource BlackBoardColor}"/>
             <Setter Property="Width" Value="100"/>
             <Setter Property="Height" Value="100"/>
+            <Setter Property="BorderThickness" Value="0"/>
         </Style>
 
         <Style TargetType="Button" x:Key="WhiteSquare">
             <Setter Property="Background" Value="{StaticResource WhiteBoardColor}"/>
             <Setter Property="Width" Value="100"/>
             <Setter Property="Height" Value="100"/>
+            <Setter Property="BorderThickness" Value="0"/>
         </Style>
 
     </Application.Resources>
