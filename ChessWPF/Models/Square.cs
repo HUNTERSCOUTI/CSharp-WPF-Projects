@@ -8,29 +8,31 @@ namespace ChessWPF.Models
 {
     public enum SquareLetter
     {
-        a,
-        b,
-        c,
-        d,
-        e,
-        f,
-        g,
-        h,
+        a = 1,
+        b = 2,
+        c = 3,
+        d = 4,
+        e = 5,
+        f = 6,
+        g = 7,
+        h = 8,
     }
     public enum SquareNumber
     {
-        one,
-        two,
-        three,
-        four,
-        five,
-        six,
-        seven,
-        eight,
+        one = 1,
+        two = 2,
+        three = 3,
+        four = 4,
+        five = 5,
+        six = 6,
+        seven = 7,
+        eight = 8,
     }
     public class Square
     {
+        // X Cordinate
         public SquareLetter squareLetter { get; set; }
+        // Y Cordinate
         public SquareNumber squareNumber { get; set; }
 
         //Make on mouse click

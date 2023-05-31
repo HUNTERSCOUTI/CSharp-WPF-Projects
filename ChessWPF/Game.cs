@@ -32,7 +32,6 @@ namespace ChessWPF
 
             for(int i = 0; i < 32; i++)
             {
-
                 if(i == 15)
                 {
 

@@ -7,85 +7,90 @@
         mc:Ignorable="d" WindowStyle="None" WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="800" Width="800">
     <Grid>
-        <StackPanel Margin="-700, 0 , 0, 0">
-            <Button x:Name="a8" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="a7" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="a6" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="a5" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="a4" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="a3" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="a2" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="a1" Style="{StaticResource WhiteSquare}"/>
-        </StackPanel>
-        <StackPanel Margin="-500, 0, 0, 0">
-            <Button x:Name="b8" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="b7" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="b6" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="b5" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="b4" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="b3" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="b2" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="b1" Style="{StaticResource BlackSquare}"/>
-        </StackPanel>
-        <StackPanel Margin="-300, 0, 0, 0">
-            <Button x:Name="c8" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="c7" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="c6" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="c5" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="c4" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="c3" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="c2" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="c1" Style="{StaticResource WhiteSquare}"/>
-        </StackPanel>
-        <StackPanel Margin="-100, 0, 0, 0">
-            <Button x:Name="d8" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="d7" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="d6" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="d5" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="d4" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="d3" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="d2" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="d1" Style="{StaticResource BlackSquare}"/>
-        </StackPanel>
-        <StackPanel Margin="100, 0, 0, 0">
-            <Button x:Name="e8" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="e7" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="e6" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="e5" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="e4" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="e3" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="e2" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="e1" Style="{StaticResource WhiteSquare}"/>
-        </StackPanel>
-        <StackPanel Margin="300, 0, 0, 0">
-            <Button x:Name="f8" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="f7" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="f6" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="f5" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="f4" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="f3" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="f2" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="f1" Style="{StaticResource BlackSquare}"/>
-        </StackPanel>
-        <StackPanel Margin="500, 0, 0, 0">
-            <Button x:Name="g8" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="g7" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="g6" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="g5" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="g4" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="g3" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="g2" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="g1" Style="{StaticResource WhiteSquare}"/>
-        </StackPanel>
-        <StackPanel Margin="700, 0, 0, 0">
-            <Button x:Name="h8" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="h7" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="h6" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="h5" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="h4" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="h3" Style="{StaticResource BlackSquare}"/>
-            <Button x:Name="h2" Style="{StaticResource WhiteSquare}"/>
-            <Button x:Name="h1" Style="{StaticResource BlackSquare}"/>
-        </StackPanel>
+        <Grid x:Name="Board">
+            <StackPanel Margin="-700, 0 , 0, 0">
+                <Button x:Name="a8" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="a7" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="a6" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="a5" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="a4" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="a3" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="a2" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="a1" Style="{StaticResource BlackSquare}"/>
+            </StackPanel>
+            <StackPanel Margin="-500, 0, 0, 0">
+                <Button x:Name="b8" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="b7" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="b6" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="b5" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="b4" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="b3" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="b2" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="b1" Style="{StaticResource WhiteSquare}"/>
+            </StackPanel>
+            <StackPanel Margin="-300, 0, 0, 0">
+                <Button x:Name="c8" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="c7" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="c6" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="c5" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="c4" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="c3" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="c2" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="c1" Style="{StaticResource BlackSquare}"/>
+            </StackPanel>
+            <StackPanel Margin="-100, 0, 0, 0">
+                <Button x:Name="d8" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="d7" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="d6" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="d5" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="d4" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="d3" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="d2" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="d1" Style="{StaticResource WhiteSquare}"/>
+            </StackPanel>
+            <StackPanel Margin="100, 0, 0, 0">
+                <Button x:Name="e8" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="e7" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="e6" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="e5" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="e4" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="e3" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="e2" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="e1" Style="{StaticResource BlackSquare}"/>
+            </StackPanel>
+            <StackPanel Margin="300, 0, 0, 0">
+                <Button x:Name="f8" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="f7" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="f6" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="f5" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="f4" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="f3" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="f2" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="f1" Style="{StaticResource WhiteSquare}"/>
+            </StackPanel>
+            <StackPanel Margin="500, 0, 0, 0">
+                <Button x:Name="g8" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="g7" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="g6" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="g5" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="g4" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="g3" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="g2" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="g1" Style="{StaticResource BlackSquare}"/>
+            </StackPanel>
+            <StackPanel Margin="700, 0, 0, 0">
+                <Button x:Name="h8" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="h7" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="h6" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="h5" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="h4" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="h3" Style="{StaticResource WhiteSquare}"/>
+                <Button x:Name="h2" Style="{StaticResource BlackSquare}"/>
+                <Button x:Name="h1" Style="{StaticResource WhiteSquare}"/>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="Pieces">
+            
+        </Grid>
     </Grid>
 </Window>
