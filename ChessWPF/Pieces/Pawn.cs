@@ -1,12 +1,6 @@
 ﻿using ChessWPF.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ChessWPF.Pieces
 {
@@ -36,7 +30,8 @@ namespace ChessWPF.Pieces
                     new Square { squareLetter = SquareLetter.g, squareNumber = SquareNumber.two },
                     new Square { squareLetter = SquareLetter.h, squareNumber = SquareNumber.two },
                 };
-            } else
+            }
+            else
             {
                 StartPosistions = new Square[]
                 {
@@ -52,5 +47,6 @@ namespace ChessWPF.Pieces
             }
 
 
+        }
     }
 }

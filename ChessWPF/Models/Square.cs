@@ -36,5 +36,9 @@ namespace ChessWPF.Models
         public SquareNumber squareNumber { get; set; }
 
         //Make on mouse click
+
+        
     }
+
+    
 }

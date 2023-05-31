@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\zilas\source\repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\
+C:\Users\Mathias Schaltz\Source\Repos\CSharp-WPF-Projects\Login System\obj\Debug\net6.0-windows\
 Login_System
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\zilas\source\repos\CSharp-WPF-Projects\Login System\App.xaml
+C:\Users\Mathias Schaltz\Source\Repos\CSharp-WPF-Projects\Login System\App.xaml
 4-777790724
 
 102100859189
-213-920284334
+2131403127596
 HomeWindow.xaml;MainWindow.xaml;UserLogin.xaml;UserSignUp.xaml;
 
-False
+True
 

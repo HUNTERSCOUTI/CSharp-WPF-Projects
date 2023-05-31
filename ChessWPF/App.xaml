@@ -22,5 +22,13 @@
             <Setter Property="BorderThickness" Value="0"/>
         </Style>
 
+        <Style TargetType="StackPanel" x:Key="SquareStack">
+            <Setter Property="LayoutTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="180"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 </Application>

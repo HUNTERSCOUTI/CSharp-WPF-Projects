@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zilas\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj": {}
+    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zilas\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj": {
+    "C:\\Users\\Mathias Schaltz\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zilas\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+        "projectUniqueName": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
         "projectName": "Login System",
-        "projectPath": "C:\\Users\\zilas\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
-        "packagesPath": "C:\\Users\\zilas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zilas\\source\\repos\\CSharp-WPF-Projects\\Login System\\obj\\",
+        "projectPath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+        "packagesPath": "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\zilas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mathias Schaltz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
