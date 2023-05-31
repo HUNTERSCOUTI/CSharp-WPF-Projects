@@ -13,12 +13,12 @@ namespace ChessWPF.Models
         public string PieceName { get; set; }
         public bool IsWhite { get; set; }
         public Square CurrentSquare { get; set; }
-        public Square[] PossibleMoves { get; set; }
+        public List<Square> PossibleMoves { get; set; }
         public Square[] StartPosistions { get; set; }
         public ImageSource PieceImage { get; set; }
 
         public Piece() { }
-        public Piece(string name, bool isWhite, Square currentSquare, Square[] possibleMoves)
+        public Piece(string name, bool isWhite, Square currentSquare, List<Square> possibleMoves)
         {
             PieceName = name;
             IsWhite = isWhite;
@@ -28,5 +28,14 @@ namespace ChessWPF.Models
 
         //Make on mouse click
 
+        public List<Square> CalcPossibleMoves()
+        {
+            List<Square> moves = new()
+            {
+                new Square(SquareLetter.a, SquareNumber.two)
+            };
+
+            return moves;
+        }
     }
 }

@@ -35,6 +35,12 @@ namespace ChessWPF.Models
         // Y Cordinate
         public SquareNumber squareNumber { get; set; }
 
+        public Square(SquareLetter sL, SquareNumber sN)
+        {
+            squareLetter = sL;
+            squareNumber = sN;
+        }
+
         //Make on mouse click
     }
 }
