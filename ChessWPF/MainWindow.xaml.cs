@@ -34,12 +34,12 @@ namespace ChessWPF
             if (Y != 8)
             {
 
-                coloredButtons.Background = Brushes.Black;
-
+                //coloredButtons.Background = Brushes.Black;
+                // MAKE
             }
 
-            if (lastPressedButton != null)
-                coloredButtons.Background = lastPressedButton.Background;
+            //if (lastPressedButton != null)
+            //coloredButtons.Background = lastPressedButton.Background;
 
 
         }

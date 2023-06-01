@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kX68nfmcIsODJd/isMRcRmS2AZLHi92VVL62UQVzOpFOQynYxefnDrTRc34JwR0mLKGBBRSaEX/wBLcORHQplQ==",
+  "dgSpecHash": "LwCQttwd+mgF79qMUM0+zblBv+UB/Hko6HvKGRj5aJP4u+ZvYkpOtR6Z403AhgDOOklVpgHOeatic0iMflF/UA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mathias Schaltz\\Source\\Repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
+  "projectFilePath": "C:\\Users\\Mathias Schaltz\\source\\repos\\CSharp-WPF-Projects\\Login System\\Login System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.4\\microsoft.data.sqlite.core.6.0.4.nupkg.sha512",
     "C:\\Users\\Mathias Schaltz\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
