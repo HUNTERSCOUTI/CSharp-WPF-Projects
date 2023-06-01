@@ -11,41 +11,41 @@ namespace ChessWPF.Pieces
             PieceName = "Pawn";
             if (IsWhite)
             {
-                PieceImage = new BitmapImage(new Uri("/Images/Pieces/WhitePawn.png"));
+                PieceImage = new BitmapImage(new Uri("/Images/Pieces/WhitePawn.png", UriKind.Relative));
             }
             else
             {
-                PieceImage = new BitmapImage(new Uri("/Images/Pieces/BlackPawn.png"));
+                PieceImage = new BitmapImage(new Uri("/Images/Pieces/BlackPawn.png", UriKind.Relative));
             }
             if (IsWhite)
             {
                 StartPosistions = new Square[]
                 {
-                    new Square { squareLetter = SquareLetter.a, squareNumber = SquareNumber.two },
-                    new Square { squareLetter = SquareLetter.b, squareNumber = SquareNumber.two },
-                    new Square { squareLetter = SquareLetter.c, squareNumber = SquareNumber.two },
-                    new Square { squareLetter = SquareLetter.d, squareNumber = SquareNumber.two },
-                    new Square { squareLetter = SquareLetter.e, squareNumber = SquareNumber.two },
-                    new Square { squareLetter = SquareLetter.f, squareNumber = SquareNumber.two },
-                    new Square { squareLetter = SquareLetter.g, squareNumber = SquareNumber.two },
-                    new Square { squareLetter = SquareLetter.h, squareNumber = SquareNumber.two },
+                    new Square(SquareLetter.a, SquareNumber.two),
+                    new Square(SquareLetter.b, SquareNumber.two),
+                    new Square(SquareLetter.c, SquareNumber.two),
+                    new Square(SquareLetter.d, SquareNumber.two),
+                    new Square(SquareLetter.e, SquareNumber.two),
+                    new Square(SquareLetter.f, SquareNumber.two),
+                    new Square(SquareLetter.g, SquareNumber.two),
+                    new Square(SquareLetter.h, SquareNumber.two),
                 };
             }
             else
             {
                 StartPosistions = new Square[]
                 {
-                    new Square { squareLetter = SquareLetter.a, squareNumber = SquareNumber.seven },
-                    new Square { squareLetter = SquareLetter.b, squareNumber = SquareNumber.seven },
-                    new Square { squareLetter = SquareLetter.c, squareNumber = SquareNumber.seven },
-                    new Square { squareLetter = SquareLetter.d, squareNumber = SquareNumber.seven },
-                    new Square { squareLetter = SquareLetter.e, squareNumber = SquareNumber.seven },
-                    new Square { squareLetter = SquareLetter.f, squareNumber = SquareNumber.seven },
-                    new Square { squareLetter = SquareLetter.g, squareNumber = SquareNumber.seven },
-                    new Square { squareLetter = SquareLetter.h, squareNumber = SquareNumber.seven },
+                    new Square(SquareLetter.a, SquareNumber.seven),
+                    new Square(SquareLetter.b, SquareNumber.seven),
+                    new Square(SquareLetter.c, SquareNumber.seven),
+                    new Square(SquareLetter.d, SquareNumber.seven),
+                    new Square(SquareLetter.e, SquareNumber.seven),
+                    new Square(SquareLetter.f, SquareNumber.seven),
+                    new Square(SquareLetter.g, SquareNumber.seven),
+                    new Square(SquareLetter.h, SquareNumber.seven),
                 };
             }
-
+        }
 
         }
     }

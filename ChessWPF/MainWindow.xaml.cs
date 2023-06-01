@@ -12,6 +12,8 @@ namespace ChessWPF
         public MainWindow()
         {
             InitializeComponent();
+            Game game = new Game();
+            game.Run();
         }
 
         private void BoardClick(object sender, RoutedEventArgs e)

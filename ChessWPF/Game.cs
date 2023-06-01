@@ -1,4 +1,5 @@
 ﻿using ChessWPF.Models;
+using ChessWPF.Pieces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,9 +30,11 @@ namespace ChessWPF
         public static Piece[] AddPieces()
         {
             Piece[] arr = new Piece[32];
+            Pawn pawn = new Pawn();
 
             for(int i = 0; i < 32; i++)
             {
+                
                 if(i == 15)
                 {
 
